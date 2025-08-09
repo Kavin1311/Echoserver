@@ -1,3 +1,6 @@
+# NAME: T.KAVINAJAI
+# REGISTER NUMBER: 212223100020
+
 # Echoserver
 Echo server and client using python socket
 # AIM:
@@ -83,7 +86,7 @@ if __name__ == "__main__":
 
 
 ### CLIENT OUTPUT:
-<img width="1920" height="997" alt="image" src="https://github.com/user-attachments/assets/c9c048fb-d3e1-4d18-821d-fc1fcb12aff1" />
+![WhatsApp Image 2025-08-09 at 10 56 59_2851eaeb](https://github.com/user-attachments/assets/238086d2-e427-40da-9616-007451413a5c)
 
 
 ## RESULT:
