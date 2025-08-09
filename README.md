@@ -6,25 +6,15 @@ To develop a simple webserver to serve html programming pages.
 
 ## DESIGN STEPS:
 
-### Step 1:
+**Step 1:** HTML content creation is done for displaying in the browser.
 
-HTML content creation is done
+**Step 2:** Design of webserver workflow is completed with request and response handling.
 
-### Step 2:
+**Step 3:** Implementation is done using Python code with HTTPServer and handler.
 
-Design of webserver workflow
+**Step 4:** HTML pages are served by running the server on localhost with port 8000.
 
-### Step 3:
-
-Implementation using Python code
-
-### Step 4:
-
-Serving the HTML pages.
-
-### Step 5:
-
-Testing the webserver
+**Step 5:** Webserver is tested by opening the browser and entering `http://127.0.0.1:8000`.
 
 ## PROGRAM:
 ```
