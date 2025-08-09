@@ -28,35 +28,37 @@ Testing the webserver
 
 ## PROGRAM:
 ```
-from http.server import HTTPServer,BaseHTTPRequestHandler
+from http.server import HTTPServer, BaseHTTPRequestHandler
 
-content='''
-<!doctype html>
+# HTML content that the server will return
+content = '''<!doctype html>
 <html>
 <head>
 <title> My Web Server</title>
 </head>
 <body>
-<h1>Top Five Web Application Development Frameworks</h1>
-<h2>1.Django</h2>
-<h2>2. MEAN Stack</h2>
-<h2>3. React </h2>
+<h1>Hello Web Server</h1>
+<h2>Top Five Web Application Development Frameworks</h2>
+<h3>1. Django</h3>
+<h3>2. MEAN Stack</h3>
+<h3>3. React</h3>
 </body>
-</html>
-
+</html>'''
 
 class MyServer(BaseHTTPRequestHandler):
     def do_GET(self):
-        print("Get request received...")
-        self.send_response(200) 
-        self.send_header("content-type", "text/html")       
+        print(f"GET request from {self.client_address}")
+        self.send_response(200)
+        self.send_header("Content-Type", "text/html")
         self.end_headers()
-        self.wfile.write(content.encode())
+        self.wfile.write(content.encode('utf-8'))
 
-print("This is my webserver") 
-server_address =('keerthi',2323)
-httpd = HTTPServer(server_address,MyServer)
-httpd.serve_forever()
+if __name__ == "__main__":
+    server_address = ('127.0.0.1', 8000)  
+    httpd = HTTPServer(server_address, MyServer)
+    print(f"Serving on http://{server_address[0]}:{server_address[1]}")
+    httpd.serve_forever()
+
 ```
 ##  Architecture Diagram
 
@@ -86,9 +88,12 @@ httpd.serve_forever()
 
 
 ## OUTPUT:
-### CLIENT OUTPUT:
-
 ### SERVER OUTPUT:
+![WhatsApp Image 2025-08-09 at 10 41 19_8311b65d](https://github.com/user-attachments/assets/c064e3b9-fabf-4e6b-a0c7-cc63e6deb53a)
+
+
+### CLIENT OUTPUT:
+![WhatsApp Image 2025-08-09 at 10 41 24_0d4fdb95](https://github.com/user-attachments/assets/a6dcc333-5cc8-4db9-8770-126d16ec1ae1)
 
 ## RESULT:
 The program is executed succesfully
